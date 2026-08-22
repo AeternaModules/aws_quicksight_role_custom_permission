@@ -1,7 +1,3 @@
-output "quicksight_role_custom_permissions_id" {
-  description = "Map of id values across all quicksight_role_custom_permissions, keyed the same as var.quicksight_role_custom_permissions"
-  value       = { for k, v in aws_quicksight_role_custom_permission.quicksight_role_custom_permissions : k => v.id if v.id != null && length(v.id) > 0 }
-}
 output "quicksight_role_custom_permissions_aws_account_id" {
   description = "Map of aws_account_id values across all quicksight_role_custom_permissions, keyed the same as var.quicksight_role_custom_permissions"
   value       = { for k, v in aws_quicksight_role_custom_permission.quicksight_role_custom_permissions : k => v.aws_account_id if v.aws_account_id != null && length(v.aws_account_id) > 0 }
